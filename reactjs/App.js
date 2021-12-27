@@ -13,6 +13,8 @@ import Protected from './components/Student/Protected';
 import Privateroutes from './components/Student/Privateroutes';
 import StudentLogout from './components/Student/StudentLogout';
 import OtpForm from './components/Student/OtpForm';
+import StudentError from './components/Student/StudentError';
+import VedioPlayer from './components/Student/VedioPlayer';
 
 // import Search from './components/Search';
 // import  CrudContext  from './contexts/CrudContext';
@@ -99,6 +101,9 @@ const App =()=>{
   <Route exact path="/logout"element={<Privateroutes Component={StudentLogout}/>} />
   {/* <Route exact path="/list" element={Privateroutes } /> */}
   <Route exact path="/list" element={<Privateroutes Component={StudentList}/> } />
+  {/* <Route exact path="/play" element={<VedioPlayer/>} /> */}
+  <Route exact path="/play" element={<Privateroutes Component={VedioPlayer}/> } />
+  <Route exact path="*" element={<StudentError/>} />
 
   </Routes> 
   </Router>

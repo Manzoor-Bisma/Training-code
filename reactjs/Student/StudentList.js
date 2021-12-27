@@ -38,10 +38,29 @@ const showData=()=>{
  }
 
   const getAllStudents = async () => {
-    const response = await fetch('/students/show')
-    const data= await response.json();
-    setStudents(data);
+    // const response = await fetch('/students/show')
+    // const data= await response.json();
+    // setStudents(data);
     // console.log(data)
+    const res = await fetch('/students/show',{
+      method : "GET",
+      headers:{
+          Accept: "application/json",
+          "content-type":"application/json"
+      },
+
+      credentials:"include"
+  })
+
+  const data = await res.json()
+  console.log(data)
+
+  if(!res.status===200){
+      const error= new Error(res.error)
+      throw error
+  }else{
+      setStudents(data)
+  }
   }
   return (
 

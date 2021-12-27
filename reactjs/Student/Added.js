@@ -1,5 +1,5 @@
 import React from 'react'
-import { Link } from 'react-router-dom';
+import { Link,Navigate } from 'react-router-dom';
 
 const Added = () =>{
     return (
@@ -17,7 +17,10 @@ const Added = () =>{
   <button class="btn btn-outline-success me-2" type="button" style={{marginLeft:'27rem'}}> <a href="/signup">Add  More Students </a></button>
   <button class="btn btn-outline-secondary me-4" type="button"> <Link to="/list">Show Students </Link></button>
   <button class="btn btn-outline-primary " type="button"> <a href="/logout"> logout </a></button>
+  {/* <button class="btn btn-outline-primary " type="button"> <a href="/play"> Player </a></button> */}
+  <button class="btn btn-outline-primary " type="button"> <Navigate to= '/play' /> player</button>
 
+  
 </form>
 </nav>
 </>

@@ -61,10 +61,10 @@ const StudentLogin = () => {
 
    
 // console.log(user)
-// useEffect(()=>{
-//     if(
-// localStorage.getItem('id') ){setAuth(true)} else setAuth(false)
-//     })
+useEffect(()=>{
+    if(
+localStorage.getItem('id') ){setAuth(true)} else setAuth(false)
+    })
 
 const toggle=()=>{
         
