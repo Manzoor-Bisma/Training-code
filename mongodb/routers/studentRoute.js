@@ -12,14 +12,14 @@ const otpSend = require('../controller/otpSend')
 const sortDataFile = require('../controller/sortedDataFile')
 
 router.post('/register', jsonParser, studentPost.student_post)
-router.get('/show', studentGet.student_get)
+router.get('/show', studentGet.student_get )
 router.delete('/:id', studentDelete.student_delete)
 router.get('/show/:id', studentGetById.StudentGetById)
 router.put(`/edit/:id`, jsonParser, studentEdit.student_update)
 router.post('/login', jsonParser,studentLogin.student_login )
 router.post('/email-send',jsonParser, otpSend.email_send)
 router.post('/change-password',jsonParser,otpSend.change_password)
-router.get('/datasort',sortDataFile.Sorted_Data_File)
+// router.get('/datasort',sortDataFile.Sorted_Data_File)
 
 
 

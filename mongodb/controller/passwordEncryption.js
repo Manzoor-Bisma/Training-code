@@ -3,12 +3,12 @@ var CryptoJS = require('crypto-js')
 const PasswordEncryptDecrypt=(cipher)=>{
     //Encrypt
     var ciphertext = CryptoJS.AES.encrypt(cipher, 'iwannabecomeagoodwebdeveloper').toString();
-    console.log(' The Encrypted Code is:      ', ciphertext)
+    console.log(' The Encrypted Code is  :   ', ciphertext)
 
     // Decrypt
     var bytes  = CryptoJS.AES.decrypt(ciphertext, 'iwannabecomeagoodwebdeveloper');
     var originalText = bytes.toString(CryptoJS.enc.Utf8);
-    console.log(' THe Decrypted text is:       ', originalText);
+    console.log(' THe Decrypted text is  :    ', originalText);
     
     
 //     var encryptedText = CryptoJS.AES.encrypt(cipher,'iamawebdeveloper')

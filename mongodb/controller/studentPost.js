@@ -48,7 +48,6 @@ const student_post = async (req, res) => {
         const password = req.body.password;
         const cpassword = req.body.cpassword;
 
-
         if (password === cpassword) {
             const data = new studentSchema({
                 _id: new mongoose.Types.ObjectId(),
