@@ -68,7 +68,8 @@ const email_send = async (req,res)=>{
 
 }
 
-const change_password = async (req,res) =>{
+const change_password = async (req,res) =>
+{
     // res.status(200).json('password sent ok')
     let data = await otpSchema.find({
         email:req.body.email,
@@ -86,22 +87,24 @@ const change_password = async (req,res) =>{
             {
                 response.message='token expire'
                 response.statusText = ' error'
-            }else
+            }
+            else
             {
                 let  student = await  studentSchema.findOne({email:req.body.email})
                 student.password =  req.body.password;
-                student.save();
+                await student.save();
+                responseType.statusText = 'successful'
                 responseType.message='password changes succesfully'
-                responseType.statusText = ' sucess password'
             }
         }
-        else{
+        else
+        {
                 responseType.message = "invalid otp",
                 responseType.statusText = "error"
         }
-        
-    }
     res.status(200).json(responseType);
+    }    
+    
 }
 
 

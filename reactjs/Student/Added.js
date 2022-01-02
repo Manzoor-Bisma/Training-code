@@ -18,7 +18,7 @@ const Added = () =>{
   <button class="btn btn-outline-secondary me-4" type="button"> <Link to="/list">Show Students </Link></button>
   <button class="btn btn-outline-primary " type="button"> <a href="/logout"> logout </a></button>
   {/* <button class="btn btn-outline-primary " type="button"> <a href="/play"> Player </a></button> */}
-  <button class="btn btn-outline-primary " type="button"> <Navigate to= '/play' /> player</button>
+  {/* <button class="btn btn-outline-primary " type="button"> <Navigate to= '/play' /> player</button> */}
 
   
 </form>

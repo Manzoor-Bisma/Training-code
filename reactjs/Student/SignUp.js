@@ -2,6 +2,7 @@ import React ,{useState} from 'react';
 import {useHistory, useNavigate} from 'react-router-dom';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+import EyeToggle from './EyeToggle';
 export function  SignUp () {
     const[show,setShow]= useState(false)
     const[show1,setShow1]= useState(false)
@@ -114,19 +115,21 @@ const toggle1=()=>{
 
                                 <div className="form-group">
                                 <label htmlFor="password"> password:- </label>  <br/>
-                                <input type={(show) ? "text":"password"} name="password" id="password" autoComplete="off"
+                                {/* <input type={(show) ? "text":"password"} name="password" id="password" autoComplete="off"
                                     value={student.password}  onChange={handleInput} placeholder="enter password"/>
-                                <i className="fa fa-eye password-icon" onClick={()=>toggle()} style={{marginLeft:"50rem", cursor: "pointer",position: 'absolute',top:'473px',left:'45px'}}></i>
-                                
+                                <i className="fa fa-eye password-icon" onClick={()=>toggle()} style={{marginLeft:"50rem", cursor: "pointer",position: 'absolute',top:'473px',left:'45px'}}></i> */}
+                                <EyeToggle password={student.password} name='password' onChange={handleInput} autoComplete="off"
+                                 style={{marginLeft:"50rem", cursor: "pointer",position: 'absolute',top:'412px',left:'15px' , width:'28rem'}} />
                                 </div>
 
                                 <div className="form-group">
                                 <label htmlFor="cpassword"> cpassword:- </label>  <br/>
-                                <input type={(show1) ? "text":"password"} name="cpassword" id="cpassword" autoComplete="off"
+                                {/* <input type={(show1) ? "text":"password"} name="cpassword" id="cpassword" autoComplete="off"
                                     value={student.cpassword}   onChange={handleInput} placeholder="confirm password"
                                 />
-                                <i className="fa fa-eye password-icon" onClick={()=>toggle1()} style={{marginLeft:"50rem", cursor: "pointer" ,position: 'absolute',top:'419px',left:'45px'}}></i>
-                                
+                                <i className="fa fa-eye password-icon" onClick={()=>toggle1()} style={{marginLeft:"50rem", cursor: "pointer" ,position: 'absolute',top:'419px',left:'45px'}}></i> */}
+                                 <EyeToggle password={student.cpassword} name='cpassword' onChange={handleInput} autoComplete="off"
+                                  />
                                 </div>
 
                                 <div className="form-group form-button">  <br/>

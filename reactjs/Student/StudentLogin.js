@@ -77,11 +77,14 @@ const toggle=()=>{
             <input type="text" name='email'  value={user.email} placeholder="Enter your Email" onChange={handleChange}></input>
             <input type={(show) ? "text":"password"} name="password" value={user.password} placeholder="Enter your Password" onChange={handleChange} ></input>
             <i className="fa fa-eye password-icon" onClick={()=>toggle()} style={{marginLeft:"50rem", cursor: "pointer",position: 'absolute',top:'219px',left:'-9px'}}></i>
+            <a href="otp" className="text-danger" > Forget Password</a>
             
             <div className="button" onClick={()=>login()}>Login</div>
             <div>or</div>
             {/* <div className="button" onClick={()=>history.push('/signup')}>Register</div> */}
             <div className="button" onClick={()=>navigate('/signup')}>Register</div>
+            {/* <div className="button" onClick={()=>navigate('/otp')}>Forget  <br/> Password</div> */}
+            
 
         </div>
     )

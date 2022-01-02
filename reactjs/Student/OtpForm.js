@@ -59,22 +59,23 @@ function OtpForm () {
               </div>
               <div className='col-md-6'>
                   <ToastContainer />
-                  <h3 className='' style={{margintop:'25px'}}> reset password </h3>
+                  <h3 className='' style={{marginTop:'18px', marginLeft:'-3rem', marginRight:'-7rem', marginBottom:'2rem'}}> Reset Password </h3>
                { otpForm ?  <form autoComplete='off' id="otpform" method='post'>
                       <div className='mb-3'>
-                          <label className='form-label'> email</label>
-                          <input type='email'className='form-control' name='email' 
-                          ref={emailRef} autoComplete='off' />
+                          <label className='form-label' style={{marginLeft:'-7rem', marginTop:'1rem', marginRight:'119px'}}  > Email:-</label>
+                          <input type='email'className='form-control' name='email' placeholder='Enter Your Correct Otp Email'
+                          ref={emailRef} autoComplete='off'  style={{marginLeft:'0rem', marginTop:'-30px', width:'18rem'}}/>
                       </div>
 
                       <div>
                         <button type='button' className='btn btn-primary' onClick={sendOtp}> send otp </button>
                         {/* nbsp; */}
-                        <Link to='/'> <button type='button' className='btn btn-danger'>  back </button></Link>
+                        <Link to='/'> <button type='button' className='btn btn-danger' style={{marginTop:'-73px', marginLeft:'12rem'}}>  back </button></Link>
                       </div>
 
                   </form>
                   : <PasswordForm email={emailRef.current.value}/>
+                // : <h1>  change password here </h1>
                 }
               </div>
 
