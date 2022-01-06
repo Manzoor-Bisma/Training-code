@@ -3,6 +3,7 @@ import React ,{useRef, useState} from 'react'
 import {Link} from 'react-router-dom'
 import {toast, ToastContainer} from 'react-toastify'
 import PasswordForm from './PasswordForm';
+// import PasswordForm from './PasswordForm';
 
 function OtpForm () {
     const emailRef = useRef();
@@ -37,7 +38,7 @@ function OtpForm () {
             let response = await axios(options)
             let record = response.data;
             console.log(record)
-            if(record.statusText == ' successfullllyyyy'){
+            if(record.statusText == ' successful'){
                 toast.success(record.message);
                 showForm(false)
             
@@ -74,7 +75,9 @@ function OtpForm () {
                       </div>
 
                   </form>
-                  : <PasswordForm email={emailRef.current.value}/>
+                //   : <PasswordForm email={emailRef.current.value}/>
+
+                : <PasswordForm email={emailRef.current.value} />
                 // : <h1>  change password here </h1>
                 }
               </div>

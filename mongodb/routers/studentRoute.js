@@ -8,7 +8,8 @@ const studentDelete = require('../controller/studentDelete')
 const studentEdit = require('../controller/studentEdit')
 const studentGetById = require('../controller/studentGetById')
 const studentLogin = require('../controller/studentLogin')
-const otpSend = require('../controller/otpSend')
+// const otpSend = require('../controller/otpSend')
+const otpSend = require('../controller/otpController')
 const sortDataFile = require('../controller/sortedDataFile')
 
 router.post('/register', jsonParser, studentPost.student_post)
@@ -19,6 +20,10 @@ router.put(`/edit/:id`, jsonParser, studentEdit.student_update)
 router.post('/login', jsonParser,studentLogin.student_login )
 router.post('/email-send',jsonParser, otpSend.email_send)
 router.post('/change-password',jsonParser,otpSend.change_password)
+// router.post('/verify',jsonParser,otpSend.verifyOTP)
+// router.post('/mail',jsonParser,otpSend.mailer)
+
+
 // router.get('/datasort',sortDataFile.Sorted_Data_File)
 
 

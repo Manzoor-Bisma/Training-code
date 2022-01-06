@@ -15,6 +15,7 @@ import StudentLogout from './components/Student/StudentLogout';
 import OtpForm from './components/Student/OtpForm';
 import StudentError from './components/Student/StudentError';
 import VedioPlayer from './components/Student/VedioPlayer';
+import OtpVerify from './components/Student/OtpVerify';
 
 // import Search from './components/Search';
 // import  CrudContext  from './contexts/CrudContext';
@@ -102,12 +103,15 @@ const App =()=>{
   {/* <Route exact path="/list" element={Privateroutes } /> */}
   <Route exact path="/list" element={<Privateroutes Component={StudentList}/> } />
   {/* <Route exact path="/play" element={<VedioPlayer/>} /> */}
-  <Route exact path="/play" element={<Privateroutes Component={VedioPlayer}/> } />
+  {/* <Route exact path="/otp" element={< OtpForm /> }/> */}
+  <Route exact path="/otp" element={< OtpVerify /> }/>
+
+
+  {/* <Route exact path="/play" element={<Privateroutes Component={VedioPlayer}/> } /> */}
   <Route exact path="*" element={<StudentError/>} />
 
   </Routes> 
   </Router>
-  {/* <Route exact path="/otp" component={OtpForm} /> */}
 
 
   {/* <Privateroutes exact path="/list" component={StudentList} element={<Privateroutes/>}  /> */}

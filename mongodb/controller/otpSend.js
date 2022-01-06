@@ -36,7 +36,7 @@ const email_send = async (req,res)=>{
                 expireIn :new Date().getTime() + 300*10000
             })
             let otpResponse =  otpData.save();
-            mailer()
+            mailer(email,otpCode)
             responseType.statusText = " successfullllyyyy"
             responseType.message = " please check your mail id"
     
@@ -137,7 +137,8 @@ const mailer = (email,otp) => {
         from:'bisma.vibgyorweb@gmail.com',
         to:'bismahmanxoor1@gmail.com',
         subject:'sending email using node js mongo db',
-        text:' thanking you'
+         text:`${otp}`
+
     };
 
     transporter.sendMail(mailOptions, function(error,info){
